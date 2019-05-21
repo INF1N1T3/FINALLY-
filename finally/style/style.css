@@ -10,6 +10,7 @@ main {
 	position: relative;
 	z-index: 999999;
 }
+
 .row {
 	width: 100%;
 	background: #fff;
@@ -22,6 +23,7 @@ main {
   "imgf imgf imgf"
   ". button button";
 }
+
 .row h1 {
 	width: 99%;
 	grid-area: h1;

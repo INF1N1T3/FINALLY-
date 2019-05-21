@@ -2,7 +2,7 @@ window.onload = function() {
 	
 	init_1();
 	init_2();
-
+	init_3();
 }
 
 function init_1() {
@@ -55,5 +55,58 @@ function init_2() {
 			$(window).scrollTop(j * 450);
 		});
 	}
+}
+function init_3() {
+	var counter = 0;
+			var img_max = 4;
+			var device_width = 450 * img_max;
+			var divs = document.querySelector(".content");
+			document.querySelector(".left").addEventListener("click", function() {
+				counter--;
+				console.log(counter);
+				if (counter < 0) {
+					counter = img_max;
+				}
+				if (counter > img_max) {
+					counter = 0;
+				}
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_1").addEventListener("click", function() {
+				counter = 0;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_2").addEventListener("click", function() {
+				counter = 1;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_3").addEventListener("click", function() {
+				counter = 2;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_4").addEventListener("click", function() {
+				counter = 3;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_5").addEventListener("click", function() {
+				counter = 4;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".right").addEventListener("click", function() {
+				counter++;
+				console.log(counter);
+				if (counter < 0) {
+					counter = img_max;
+				}
+				if (counter > img_max) {
+					counter = 0;
+				}
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
 }
 	

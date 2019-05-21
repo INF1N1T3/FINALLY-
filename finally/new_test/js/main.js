@@ -22,9 +22,9 @@ window.onload = function() {
 	 ];
 	 const full_inf = [
 	 		"results/fiz_mat/page 2.html",
-	 		"",
-	 		"",
-	 		"",
+	 		"results/mat_teh/page 2.html",
+	 		"results/him_bio/page 2.html",
+	 		"results/lingvist/page 2.html",
 	 		""
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
@@ -40,7 +40,7 @@ window.onload = function() {
 	 function initNext(counter, result) {
 	 	onMain.addEventListener("click",  function() {
 	 		console.log("Under construction...");
-	 		//window.location.href = "ТРУЛЯЛЯ";
+	 		//window.location.href = "";
 	 	});
 	 	restart.addEventListener("click", function() {
 	 		window.location.reload()
