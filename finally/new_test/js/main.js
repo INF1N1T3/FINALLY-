@@ -21,11 +21,11 @@ window.onload = function() {
 	     "Д"
 	 ];
 	 const full_inf = [
-	 		"results/fiz_mat/page 2.html",
-	 		"results/mat_teh/page 2.html",
-	 		"results/him_bio/page 2.html",
-	 		"results/lingvist/page 2.html",
-	 		""
+	 		"results/chim_bio 2/page 2.html",
+	 		"results/fiz_mat 2/page 2.html",
+	 		"results/lingvo 2/page 2.html",
+	 		"results/soc_econom 2/page 2.html",
+	 		"results/soc_gum 2/page 2.html"
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
 	 const question = document.querySelector(".question");
@@ -38,9 +38,8 @@ window.onload = function() {
 	 console.log(result_content_name.innerHTML, result_content_text, result_content)
 	 var counter = 0;
 	 function initNext(counter, result) {
-	 	onMain.addEventListener("click",  function() {
-	 		console.log("Under construction...");
-	 		//window.location.href = "";
+	 	onMain.addEventListener("mouseover",  function() {
+	 		onMain.href = "../index.html";
 	 	});
 	 	restart.addEventListener("click", function() {
 	 		window.location.reload()
@@ -55,9 +54,8 @@ window.onload = function() {
 	 				console.log(Math.round(result));
 	 			question.style.display = "none";
 	 			result_content_name.innerHTML = results[Math.round(result)];
-	 			onPage.addEventListener("click", function() {
-	 				console.log("Under construction...");
-	 				//window.location.href = full_inf[Math.round(result)];
+	 			onPage.addEventListener("mouseover", function() {
+	 				onPage.href = full_inf[Math.round(result)];
 	 			});
 	 			result_content.style.display = "grid";
 	 			for (var i = 0; i < buttons.length; i++) {

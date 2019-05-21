@@ -12,50 +12,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<script src="script/script.js"></script>
 	<style>
-	.row_slider {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	background: #fff;
-}
-	.main {
-	width: 450px;
-	height: 300px;
-}
-.left {
-position: relative;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-background: gray;
-left: -70px;
-top: 50%;
-transform: translateY(-50%);
-}
-.right {
-position: relative;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-background: gray;
-right: -70px;
-top: 50%;
-transform: translateY(-50%);
-}
-.container {
-width: 100%;
-height: 100%;
-position: relative;
-left: 0;
-top:0;
-overflow: hidden;
-}
-.content
+		.content
 {
 width: 2250px;
 height: 300px;
-position:relative;
 transition: all 1s;
 background-image: url("img/slider.jpg");
 left:0;
@@ -63,70 +23,17 @@ top:0;
 background-size: 100%;
 background-position: 0px -300px;
 }
-.selector_1 {
-	position: relative;
+.selector {
 	width: 75px;
 	height: 75px;
-	left: 17%;
-	transform: translateX(-17%);
-	bottom: -100px;
 	background-image: url("img/aaaaaaaaaaa.png");
-	background-position: -75px -150px;
-	overflow: hidden;
 }
-.selector_2 {
-	position: relative;
-	width: 75px;
-	height: 75px;
-	left: 34%;
-	transform: translateX(-34%);
-	bottom: -100px;
-	background-image: url("img/aaaaaaaaaaa.png");
-	background-position: -150px -150px;
-	overflow: hidden;
-}
-.selector_3 {
-	position: absolute;
-	width: 75px;
-	height: 75px;
-	left: 51%;
-	transform: translateX(-51%);
-	bottom: -100px;
-	background-image: url("img/aaaaaaaaaaa.png");
-	background-position: -225px -150px;
-	overflow: hidden;
-}
-.selector_4 {
-	position: relative;
-	width: 75px;
-	height: 75px;
-	left: 68%;
-	transform: translateX(-68%);
-	bottom: -100px;
-	background-image: url("img/aaaaaaaaaaa.png");
-	background-position: -300px -150px;
-	overflow: hidden;
-}
-.selector_5 {
-	position: relative;
-	width: 75px;
-	height: 75px;
-	left: 85%;
-	transform: translateX(-85%);
-	bottom: -100px;
-	background-image: url("img/aaaaaaaaaaa.png");
-	background-position: -375px -150px;
-	overflow: hidden;
-}
-
 	</style>
 </head>
 <body>
 			<div class="start_forjs">
 			</div>
 			<div class="menu_for_phones">
-				<div class="point">Information</div>
-				<div class="point">YAY</div>
 				<div class="point">Information</div>
 				<div class="point">YAY</div>
 				<div class="point">Information</div>
@@ -140,8 +47,6 @@ background-position: 0px -300px;
 					<li>Information</li>
 					<li>YAY</li>
 					<li>Information</li>
-					<li>YAY</li>
-					<li>Information</li>
 				</ul>
 				<div class="menu">
 					<div class="stripe"></div>
@@ -150,50 +55,59 @@ background-position: 0px -300px;
 				</div>
 			</header>
 	<div class="row_slider">
-		<div class = "main"> 
+		
+		 <div class = "main"> 
+		 	
 		<div class = "left"></div> 
-			<div class = "container"> 
+
+				<div class = "container"> 
+
 				<div class = "content">  
 				
 				</div> 
 			</div> 
+			
 		<div class = "right"></div> 
-		<div class = "selector_1"> </div>
-		<div class = "selector_2"> </div>
-		<div class = "selector_3"> </div>
-		<div class = "selector_4"> </div>
-		<div class = "selector_5"> </div>
+		<div class="bar">
+		<div class = "selector selector_1"> </div>
+		<div class = "selector selector_2"> </div>
+		<div class = "selector selector_3"> </div>
+		<div class = "selector selector_4"> </div>
+		<div class = "selector selector_5"> </div>
 	</div>
+	</div>
+
+	</div>
+
+	<div class="row">
+		<h1>RANDOM TEXT</h1>
+		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="img_"></div>
+		<a class="to_test" href = "" >Пройти тест</a>
 	</div>
 	<div class="row">
 		<h1>RANDOM TEXT</h1>
 		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="img_"></div>
-		<a class="to_test">Пройти тест</a>
+		<a class="to_test" href = "" >Пройти тест</a>
 	</div>
 	<div class="row">
 		<h1>RANDOM TEXT</h1>
 		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="img_"></div>
-		<a class="to_test">Пройти тест</a>
+		<a class="to_test" href = "" >Пройти тест</a>
 	</div>
 	<div class="row">
 		<h1>RANDOM TEXT</h1>
 		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="img_"></div>
-		<a class="to_test">Пройти тест</a>
+		<a class="to_test" href = "" >Пройти тест</a>
 	</div>
 	<div class="row">
 		<h1>RANDOM TEXT</h1>
 		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="img_"></div>
-		<a class="to_test">Пройти тест</a>
-	</div>
-	<div class="row">
-		<h1>RANDOM TEXT</h1>
-		<div class="main_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-		<div class="img_"></div>
-		<a class="to_test">Пройти тест</a>
+		<a class="to_test" href = "" >Пройти тест</a>
 	</div>
 </main>
 </body>

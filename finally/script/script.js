@@ -3,6 +3,8 @@ window.onload = function() {
 	init_1();
 	init_2();
 	init_3();
+	init_4();
+
 }
 
 function init_1() {
@@ -10,28 +12,29 @@ function init_1() {
 	const for_menu = document.querySelector(".menu_for_phones");
 	const stripes = document.querySelectorAll(".stripe");
 	var open = false;
-	const toTest = document.querySelectorAll("to_test");
+	const toTest = document.getElementsByTagName('a');
 	for (let i = 0; i < toTest.length; i++) {
-		toTest[i].addEventListener("click", function() {
-			window.location.href = "finally/new_test/main_test.html";
+		toTest[i].addEventListener("mouseover", function() {
+			toTest[i].href = "new_test/main_test.html";
 		});
 	}
+
 	menu.addEventListener("click", function(){
 			if (open) {
 				for_menu.style.left = "-95%";
 				stripes[0].style.transform = "rotate(0deg)";
 				stripes[1].style.opacity = "1";
 				stripes[2].style.transform = "rotate(0deg)";
-				for (var i = 0; i < stripes.length; i++) {
-					stripes[i].style.marginTop = "5px";
+				for (let g = 0; g < stripes.length; g++) {
+					stripes[g].style.marginTop = "5px";
 				}
 			} else {
 				for_menu.style.left = "50%";
 				stripes[0].style.transform = "rotate(-45deg)";
 				stripes[1].style.opacity = "0";
 				stripes[2].style.transform = "rotate(45deg)";
-				for (var i = 0; i < stripes.length; i++) {
-					stripes[i].style.marginTop = "-8px";
+				for (let q = 0; q < stripes.length; q++) {
+					stripes[q].style.marginTop = "-8px";
 				}
 			}
 			open = !open;
@@ -45,19 +48,19 @@ function init_2() {
 	console.log(menu_for_phone);
 	for (let i = 0; i < menu_for_tablets.length; i++) {
 		menu_for_tablets[i].addEventListener("click", function() {
-			console.log(i * 480);
-			$(window).scrollTop(i * 480);
+			console.log((i * 480) + 470);
+			$(window).scrollTop((i * 480) + 470);
 		});
 	}
 	for (let j = 0; j < menu_for_phone.length; j++) {
 		menu_for_phone[j].addEventListener("click", function() {
-			console.log(j * 450);
-			$(window).scrollTop(j * 450);
+			console.log((j * 480) + 470);
+			$(window).scrollTop((j * 480) + 470);
 		});
 	}
 }
 function init_3() {
-	var counter = 0;
+			var counter = 0;
 			var img_max = 4;
 			var device_width = 450 * img_max;
 			var divs = document.querySelector(".content");
@@ -70,32 +73,7 @@ function init_3() {
 				if (counter > img_max) {
 					counter = 0;
 				}
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
-			});
-			document.querySelector(".selector_1").addEventListener("click", function() {
-				counter = 0;
-				console.log(counter);
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
-			});
-			document.querySelector(".selector_2").addEventListener("click", function() {
-				counter = 1;
-				console.log(counter);
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
-			});
-			document.querySelector(".selector_3").addEventListener("click", function() {
-				counter = 2;
-				console.log(counter);
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
-			});
-			document.querySelector(".selector_4").addEventListener("click", function() {
-				counter = 3;
-				console.log(counter);
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
-			});
-			document.querySelector(".selector_5").addEventListener("click", function() {
-				counter = 4;
-				console.log(counter);
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+				document.querySelector(".content").style.backgroundPositionX = "-" +  counter * (device_width / img_max) + "px"; 
 			});
 			document.querySelector(".right").addEventListener("click", function() {
 				counter++;
@@ -106,7 +84,24 @@ function init_3() {
 				if (counter > img_max) {
 					counter = 0;
 				}
-				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+				document.querySelector(".content").style.backgroundPositionX = "-" + counter * (device_width / img_max) + "px"; 
+			});
+}
+function init_4() {
+	document.querySelector(".selector_1").addEventListener("click", function() {
+				$(window).scrollTop((0 * 480) + 470);
+			});
+			document.querySelector(".selector_2").addEventListener("click", function() {
+				$(window).scrollTop((1 * 480) + 470); 
+			});
+			document.querySelector(".selector_3").addEventListener("click", function() {
+				$(window).scrollTop((2 * 480) + 470);
+			});
+			document.querySelector(".selector_4").addEventListener("click", function() {
+				$(window).scrollTop((3 * 480) + 470);
+			});
+			document.querySelector(".selector_5").addEventListener("click", function() {
+				$(window).scrollTop((4 * 480) + 470);
 			});
 }
 	
