@@ -94,9 +94,6 @@ function init_4() {
 			document.querySelector(".selector_2").addEventListener("click", function() {
 				$(window).scrollTop((1 * 480) + 470); 
 			});
-			document.querySelector(".selector_3").addEventListener("click", function() {
-				$(window).scrollTop((2 * 480) + 470);
-			});
 			document.querySelector(".selector_4").addEventListener("click", function() {
 				$(window).scrollTop((3 * 480) + 470);
 			});

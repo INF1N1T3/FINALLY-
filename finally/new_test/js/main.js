@@ -20,17 +20,35 @@ window.onload = function() {
 	 "-Если заранее посижу с учебником.",
 	 "-Это явно не ко мне." ],
 
-		["-Без проблем.",
-			"-Если заранее посижу с учебником.",
-			"-Это явно не ко мне." ],
+		["-Интересно.",
+		 "-Не вызывает отторжения.",
+		 "-Скучно."
+ ],
 
-		["-Без проблем.",
-			"-Если заранее посижу с учебником.",
-			"-Это явно не ко мне." ],
-		["-Без проблем.",
-			"-Если заранее посижу с учебником.",
-			"-Это явно не ко мне." ],
-
+		["-Интересно.",
+		 "-Не вызывает отторжения.",
+		 "-Скучно."
+ ],
+		["-Интересно.",
+		 "-Не вызывает отторжения.",
+		 "-Скучно."
+ ],
+	["-Интересно.",
+	 "-Средненько.",
+	 "-Скучно."
+	],
+	["-Да, фиксирую все доходы и расходы.",
+	 "-Ну, в целом я знаю, сколько трачу.",
+	 "-Нет, не слежу."
+],
+	["-Заставляет моё сердце биться чаще.",
+	 "-Не захватывает, но и отторжения нет.",
+	 "-Ввергает в уныние, рождает панику."
+	],
+		["-Да, меня это не пугает.",
+		 "-Меня это немного пугает, но, думаю, я справлюсь.",
+	     "-Нет."
+	]
 
 
 	 ];
@@ -40,16 +58,20 @@ window.onload = function() {
 	 "Умеешь ли ты быстро производить расчеты в уме?",
 	 "Настраивать прокси-сервер — это ...",
 	 "Сможешь ли ты оказать первую медицинскую помощь?",
-	 "Сможешь ли ты оказать первую медицинскую помощь?",
-	 "Сможешь ли ты оказать первую медицинскую помощь?",
-	 "Сможешь ли ты оказать первую медицинскую помощь?"
+	 "Интересно ли тебе разбираться в свойствах различных материалов?",
+	 "Постоянно быть в курсе всех событий мира - это...",
+	 "Изучение законов, отслеживание изменений в законодательстве — это ... ",
+	 "Рассчитывать заработную плату сотрудникам — это должно быть...",
+	 "Следишь ли ты за своими доходами и расходами?",
+	 "Изучение строения человеческой ткани, структуры ДНК и всего такого...",
+	 "Смог бы ты часто посещать тюрьмы, общаться с преступниками?",
 	 ];
 	 const results = [
-	 	 "Инфо - тех",
+	 	 "Соц - эконом",
 	 	 "Физ - мат",
-	     "Лингвистический",
+	     "Соц - гум",
 	     "Хим - био",
-	     "Соц - гум"
+	     "Естест - науч"
 	 ];
 	 const full_inf = [
 	 		"results/soc_econom 2/page 2.html",
@@ -57,14 +79,6 @@ window.onload = function() {
 		 "results/lingvo 2/page 2.html",
 		 "results/chim_bio 2/page 2.html",
 	 		"results/soc_gum 2/page 2.html"
-	 ];
-	 const result_wow = [
-	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
-	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
-	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
-	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
-	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"]
-
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
 	 const question = document.querySelector(".question");
@@ -75,6 +89,7 @@ window.onload = function() {
 	 const onPage = document.querySelector(".on_page");
 	 console.log(result_content_name.innerHTML, result_content)
 	 let counter = 0;
+	 	let result = 2;
 	 function initNext(counter, result) {
 	 	onMain.addEventListener("mouseover",  function() {
 	 		onMain.href = "../index.html";
@@ -89,7 +104,7 @@ window.onload = function() {
 	 			for (let l = 0; l < answers[counter].length; l++) buttons[l].style.display = "block";
 	 			for (let m = answers[counter].length; m < buttons.length; m++) buttons[m].style.display = "none";
 	 		} else {
-	 			if (result < 0) { result = 0;} else if (result => results.length - 1) {result = results.length - 1;}
+	 			if (result <= 0) { result = 0;} else if (result => results.length - 1) {result = results.length - 1;}
 	 				console.log(Math.round(result));
 	 			question.style.display = "none";
 	 			result_content_name.innerHTML = results[Math.round(result)];
@@ -103,7 +118,6 @@ window.onload = function() {
 	 		}
 	 	
 	}
-	let result = 2;
 	initNext(counter, result);
 	for (let i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener("click", function() {
@@ -158,4 +172,5 @@ window.onload = function() {
 			initNext(counter, result);
 		});
 	}
+	
 }
