@@ -51,6 +51,20 @@ main {
 	width: 450px;
 	height: 300px;
 }
+
+@media (max-width: 451px) {
+	.main {
+		position: relative;
+		margin-top: -10%;
+		width: 300px;
+		height: 300px;
+	}
+	.selector {
+		width: 50px;
+		height: 50px;
+		background-image: url("../img/aaaaaaaaaaa.png");
+	}
+}
 	.left {
 	width: 50px;
 	height: 50px;

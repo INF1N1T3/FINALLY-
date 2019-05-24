@@ -7,26 +7,32 @@ window.onload = function() {
 	 ["-Да.",
 	  "-Если заранее подготовлюсь.",
 	  "-Нет."],
-	  
+
 	 ["-Без проблем.",
-	  "-В зависимости от того, о каких правах речь.",
+	  "-В зависимости от того, какая сложность.",
 	  "-Это явно не ко мне."],
-	  
-	 ["-Да.",
-	  "-Если заранее подготовлюсь.",
-	  "-Нет."],
+
+	 ["-Интересно.",
+	  "-Затрудняюсь ответить.",
+	  "-Скучно."],
 	  
 	 ["-Без проблем.",
 	 "-Если заранее посижу с учебником.",
 	 "-Это явно не ко мне." ],
-	 
-	 ["-Интересно.",
-	 "-Не вызывает отторжения.",
-	 "-Скучно." ],
-	 
-	 ["-Интересно.",
-	 "-Не вызывает отторжения.",
-	 "-Скучно." ],
+
+		["-Без проблем.",
+			"-Если заранее посижу с учебником.",
+			"-Это явно не ко мне." ],
+
+		["-Без проблем.",
+			"-Если заранее посижу с учебником.",
+			"-Это явно не ко мне." ],
+		["-Без проблем.",
+			"-Если заранее посижу с учебником.",
+			"-Это явно не ко мне." ],
+
+
+
 	 ];
 	 const questions = [
 	 "Постоянная работа за компьютером тебя… ",
@@ -34,34 +40,41 @@ window.onload = function() {
 	 "Умеешь ли ты быстро производить расчеты в уме?",
 	 "Настраивать прокси-сервер — это ...",
 	 "Сможешь ли ты оказать первую медицинскую помощь?",
-	 "Создание подарков своими руками — это...",
-	 "Общаться с пациентами, лечить больных — это ...",
-	 "Рассматривать живые организмы под микроскопом — это ...",
+	 "Сможешь ли ты оказать первую медицинскую помощь?",
+	 "Сможешь ли ты оказать первую медицинскую помощь?",
+	 "Сможешь ли ты оказать первую медицинскую помощь?"
 	 ];
 	 const results = [
-	 	 "А",
-	 	 "Б",
-	     "В",
-	     "Г",
-	     "Д"
+	 	 "Инфо - тех",
+	 	 "Физ - мат",
+	     "Лингвистический",
+	     "Хим - био",
+	     "Соц - гум"
 	 ];
 	 const full_inf = [
-	 		"results/chim_bio 2/page 2.html",
-	 		"results/fiz_mat 2/page 2.html",
-	 		"results/lingvo 2/page 2.html",
 	 		"results/soc_econom 2/page 2.html",
+		 "results/fiz_mat 2/page 2.html",
+		 "results/lingvo 2/page 2.html",
+		 "results/chim_bio 2/page 2.html",
 	 		"results/soc_gum 2/page 2.html"
+	 ];
+	 const result_wow = [
+	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
+	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
+	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
+	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"],
+	 	["AAAAAAAAAAAAAAAAAAAAAAAAAAAA" , "ББББББББББББББББББББББББББББББББББББББББ" , "ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ"]
+
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
 	 const question = document.querySelector(".question");
 	 const result_content = document.querySelector(".result");
 	 const result_content_name = document.querySelector(".result .proffesion_name");
-	 const result_content_text = document.querySelectorAll(".result .text");
 	 const restart = document.querySelector(".restart");
 	 const onMain = document.querySelector(".on_main");
 	 const onPage = document.querySelector(".on_page");
-	 console.log(result_content_name.innerHTML, result_content_text, result_content)
-	 var counter = 0;
+	 console.log(result_content_name.innerHTML, result_content)
+	 let counter = 0;
 	 function initNext(counter, result) {
 	 	onMain.addEventListener("mouseover",  function() {
 	 		onMain.href = "../index.html";
@@ -72,10 +85,11 @@ window.onload = function() {
 	 		if (questions.length > counter) {
 	 			question.innerHTML = questions[counter];
 	 			for (let i = 0; i < answers[counter].length; i++) buttons[i].innerHTML = answers[counter][i];
-	 			for (let i = 0; i < answers[counter].length; i++) buttons[i].style.display = "block";
-	 			for (let i = answers[counter].length; i < buttons.length; i++) buttons[i].style.display = "none";
+	 			console.log(answers);
+	 			for (let l = 0; l < answers[counter].length; l++) buttons[l].style.display = "block";
+	 			for (let m = answers[counter].length; m < buttons.length; m++) buttons[m].style.display = "none";
 	 		} else {
-	 			if (result < 0) { result = 0} else if (result >= results.length - 1) {result = results.length - 1} 
+	 			if (result < 0) { result = 0;} else if (result => results.length - 1) {result = results.length - 1;}
 	 				console.log(Math.round(result));
 	 			question.style.display = "none";
 	 			result_content_name.innerHTML = results[Math.round(result)];
@@ -83,13 +97,13 @@ window.onload = function() {
 	 				onPage.href = full_inf[Math.round(result)];
 	 			});
 	 			result_content.style.display = "grid";
-	 			for (var i = 0; i < buttons.length; i++) {
-	 				buttons[i].style.display = "none";
+	 			for (let a = 0; a < buttons.length; a++) {
+	 				buttons[a].style.display = "none";
 	 			}
 	 		}
 	 	
 	}
-	var result = 2;
+	let result = 2;
 	initNext(counter, result);
 	for (let i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener("click", function() {
