@@ -76,9 +76,9 @@ window.onload = function() {
 	 const full_inf = [
 	 		"results/soc_econom 2/page 2.html",
 		 "results/fiz_mat 2/page 2.html",
-		 "results/lingvo 2/page 2.html",
+			"results/soc_gum 2/page 2.html",
 		 "results/chim_bio 2/page 2.html",
-	 		"results/soc_gum 2/page 2.html"
+	 		"results/chim_bio 2/page 2.html"
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
 	 const question = document.querySelector(".question");

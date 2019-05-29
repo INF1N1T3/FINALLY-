@@ -48,14 +48,14 @@ function init_2() {
 	console.log(menu_for_phone);
 	for (let i = 0; i < menu_for_tablets.length; i++) {
 		menu_for_tablets[i].addEventListener("click", function() {
-			console.log((i * 480) + 470);
-			$(window).scrollTop((i * 480) + 470);
+			console.log((i * 500) + 470);
+			$(window).scrollTop((i * 500) + 470);
 		});
 	}
 	for (let j = 0; j < menu_for_phone.length; j++) {
 		menu_for_phone[j].addEventListener("click", function() {
-			console.log((j * 480) + 470);
-			$(window).scrollTop((j * 480) + 470);
+			console.log((j * 500) + 470);
+			$(window).scrollTop((j * 500) + 470);
 		});
 	}
 }
@@ -89,16 +89,19 @@ function init_3() {
 }
 function init_4() {
 	document.querySelector(".selector_1").addEventListener("click", function() {
-				$(window).scrollTop((0 * 480) + 470);
-			});
-			document.querySelector(".selector_2").addEventListener("click", function() {
-				$(window).scrollTop((1 * 480) + 470); 
+				$(window).scrollTop((0 * 500) + 470);
 			});
 			document.querySelector(".selector_4").addEventListener("click", function() {
-				$(window).scrollTop((3 * 480) + 470);
+				$(window).scrollTop((1 * 500) + 470); 
+			});
+			document.querySelector(".selector_2").addEventListener("click", function() {
+				$(window).scrollTop((3 * 500) + 470);
 			});
 			document.querySelector(".selector_5").addEventListener("click", function() {
-				$(window).scrollTop((4 * 480) + 470);
+				$(window).scrollTop((4 * 500) + 470);
+			});
+			document.querySelector(".selector_dop").addEventListener("click", function() {
+				$(window).scrollTop((5 * 500) + 470);
 			});
 }
 	
