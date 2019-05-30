@@ -177,7 +177,6 @@ main {
 	height: 300px;
 	position: relative;
 	grid-area: imgf;
-	background-color: blue;
 	left: 50%;
 	transform: translateX(-50%);
 }

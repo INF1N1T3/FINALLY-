@@ -15,11 +15,11 @@ header {
 header .logo{
   width: 75px;
   height: 75px;
-  background-color: #fff;
   position: relative;
   left: 10px;
   top: 5px;
-  background-color: orange;
+  background-image: url('../img/logo.png');
+  background-position: -375px -150px;
 }
 a {
   text-decoration: none;

@@ -265,9 +265,9 @@ font-family: 'Montserrat', sans-serif;
 	grid-template-rows: 25% 17% 16% 16% 25%;
 	 grid-template-areas: 
   	"h1 h1 h1 h1 h1 h1" 
-  	"div1 div1 div1 div1 div1 div1"
-  	"div2 div2 div2 div2 div2 div2"
-  	"div3 div3 div3 div3 div3 div3"
+  	"h1 h1 h1 h1 h1 h1"
+  	"h1 h1 h1 h1 h1 h1"
+  	"h1 h1 h1 h1 h1 h1"
   	"restart restart onpage onpage onmain onmain";
 }
 .result .proffesion_name {

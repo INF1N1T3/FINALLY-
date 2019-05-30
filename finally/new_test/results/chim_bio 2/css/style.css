@@ -75,11 +75,11 @@ header .restart_button{
 header .logo{
   width: 75px;
   height: 75px;
-  background-color: #fff;
   position: relative;
   left: 10px;
   top: 5px;
-  background-color: lime;
+  background-image: url('../img/logo.png');
+  background-position: -150px -150px;
 }
 
 main {

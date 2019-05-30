@@ -67,18 +67,18 @@ window.onload = function() {
 	 "Смог бы ты часто посещать тюрьмы, общаться с преступниками?",
 	 ];
 	 const results = [
-	 	 "Соц - эконом",
-	 	 "Физ - мат",
-	     "Соц - гум",
-	     "Хим - био",
-	     "Естест - науч"
+		 "Физико - математический",
+	     "Социально - экономический",
+		 "Химико - биологический",
+		 "Социально - гуманитарный",
+		 "Лингвистический",
 	 ];
 	 const full_inf = [
-	 		"results/soc_econom 2/page 2.html",
-		 "results/fiz_mat 2/page 2.html",
+		"results/fiz_mat 2/page 2.html",
+		"results/soc_econom 2/page 2.html",
+	 		"results/chim_bio 2/page 2.html",
 			"results/soc_gum 2/page 2.html",
-		 "results/chim_bio 2/page 2.html",
-	 		"results/chim_bio 2/page 2.html"
+			"results/lingvo 2/page 2.html",
 	 ];
 	 const buttons = document.querySelectorAll(".answer");
 	 const question = document.querySelector(".question");
@@ -89,7 +89,7 @@ window.onload = function() {
 	 const onPage = document.querySelector(".on_page");
 	 console.log(result_content_name.innerHTML, result_content)
 	 let counter = 0;
-	 	let result = 2;
+	 	let result = 1.5;
 	 function initNext(counter, result) {
 	 	onMain.addEventListener("mouseover",  function() {
 	 		onMain.href = "../index.html";
@@ -103,8 +103,9 @@ window.onload = function() {
 	 			console.log(answers);
 	 			for (let l = 0; l < answers[counter].length; l++) buttons[l].style.display = "block";
 	 			for (let m = answers[counter].length; m < buttons.length; m++) buttons[m].style.display = "none";
+				console.log(result);
 	 		} else {
-	 			if (result <= 0) { result = 0;} else if (result => results.length - 1) {result = results.length - 1;}
+	 			if (result <= 0) { result = 0;} else if (results.length - 1 <= result) {result = results.length - 1;}
 	 				console.log(Math.round(result));
 	 			question.style.display = "none";
 	 			result_content_name.innerHTML = results[Math.round(result)];
