@@ -48,14 +48,14 @@ function init_2() {
 	console.log(menu_for_phone);
 	for (let i = 0; i < menu_for_tablets.length; i++) {
 		menu_for_tablets[i].addEventListener("click", function() {
-			console.log((i * 420) + 470);
-			$(window).scrollTop((i * 420) + 470);
+			console.log((i * 400) + 400);
+			$(window).scrollTop((i * 400) + 400);
 		});
 	}
 	for (let j = 0; j < menu_for_phone.length; j++) {
 		menu_for_phone[j].addEventListener("click", function() {
-			console.log((j * 500) + 470);
-			$(window).scrollTop((j * 500) + 470);
+			console.log((j * 400) + 400);
+			$(window).scrollTop((j * 400) + 400);
 		});
 	}
 }
@@ -89,19 +89,19 @@ function init_3() {
 }
 function init_4() {
 	document.querySelector(".selector_1").addEventListener("click", function() {
-				$(window).scrollTop(470);
+				$(window).scrollTop(400);
 			});
 			document.querySelector(".selector_4").addEventListener("click", function() {
-				$(window).scrollTop((640) + 470); 
+				$(window).scrollTop(800);
 			});
+	document.querySelector(".selector_5").addEventListener("click", function() {
+		$(window).scrollTop(1300);
+	});
 			document.querySelector(".selector_2").addEventListener("click", function() {
-				$(window).scrollTop((3 * 500) + 470);
+				$(window).scrollTop(1800);
 			});
-			document.querySelector(".selector_5").addEventListener("click", function() {
-				$(window).scrollTop((4 * 500) + 470);
-			});
-			document.querySelector(".selector_dop").addEventListener("click", function() {
-				$(window).scrollTop((5 * 500) + 470);
-			});
+	document.querySelector(".selector_3").addEventListener("click", function() {
+		$(window).scrollTop(1800);
+	});
 }
 	
